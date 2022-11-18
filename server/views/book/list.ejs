@@ -1,0 +1,50 @@
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/main_nav.ejs') %>
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-10">
+    <h1><%= title %></h1>
+    <a href="/book-list/add" class="btn btn-primary" role="button">
+        <i class="fas fa-plus-circle"></i> Add a Book </a>
+        <br>
+    <br>
+    <table class = "table table-bordered table-striped table-hover">
+    <tr class="d-flex">
+    <th class ="text-centre col-2">name</th>
+    <th class ="text-centre col-2">author</th>
+    <th class ="text-centre col-3">published</th>
+    <th class ="text-centre col-6">description</th>
+    <th class ="text-centre col-1">price</th>
+    <th class ="text-centre col-1"></th>
+    <th class ="text-centre col-1"></th>
+    </tr>
+    <!-- repeat template -->
+    <% for(let count= 0; count<booklist.length; count ++) {%>
+        <tr class="d-flex">
+        <td class="text-centre col-2"><%= booklist[count].name %></td>
+        <td class="text-centre col-2"><%= booklist[count].author %></td>
+        <td class="text-centre col-3"><%= booklist[count].published %></td>
+        <td class="text-centre col-5"><%= booklist[count].description %></td>
+        <td class="text-centre col-1"><%= booklist[count].price %></td>
+        <td class="text-centre col-1">
+            <a href="/book-list/edit/<%= booklist[count].price %>"
+            class="btn btn-primary">
+            <i class="fas fa-pencil-alt"></i> Edit </a>
+            </td>
+        <td class="text-centre col-1">
+            <a href="/book-list/delete/<%= booklist[count].price %>"
+            class="btn btn-danger">
+            <i class="fas fa-pencil-alt"></i> Delete </a>
+            </td>
+       
+        </tr>
+
+    <%} %>
+    <table>
+    </table>
+    </div>
+</div>
+</main>
+<%- include ('../partials/bottom_nav.ejs') %>
+<%- include ('../partials/footer.ejs')%> 
