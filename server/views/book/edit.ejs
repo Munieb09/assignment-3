@@ -24,7 +24,7 @@
     id="authorTextField"
     placeholder="Enter the Books author"
     name="author" 
-    value="<%= book.name%>"
+    value="<%= book.author%>"
     required>
     </div>
 
@@ -34,7 +34,7 @@
     id="publishedTextField"
     placeholder="Enter the year of publication"
     name="published" 
-    value="<%= book.publsihed %>"
+    value="<%= book.published %>"
     required>
     </div>
 
@@ -43,7 +43,7 @@
     <textarea type="text" class="form-control"
     id="nameTextField"
     placeholder="Enter the description of book"
-    nam="description" required>
+    name="description" required>
     <%= book.description%>"
     </textarea>
     </div>
@@ -53,13 +53,13 @@
     <input type="number" class="form-control"
     id="priceTextField"
     placeholder="Enter the price of book"
-    nam="price" 
+    name="price" 
     value="<%= book.price%>"
     required>
     </div>
 
 <br>
-<button class="btn-btn-primary" type="submit">
+<button class="btn-btn-primary" type="submit btn">
 <i class="fas fa-edit"></i> Submit
 </button>
 

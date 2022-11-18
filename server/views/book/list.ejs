@@ -28,12 +28,12 @@
         <td class="text-centre col-5"><%= booklist[count].description %></td>
         <td class="text-centre col-1"><%= booklist[count].price %></td>
         <td class="text-centre col-1">
-            <a href="/book-list/edit/<%= booklist[count].price %>"
+            <a href="/book-list/edit/<%= booklist[count]._id %>"
             class="btn btn-primary">
             <i class="fas fa-pencil-alt"></i> Edit </a>
             </td>
         <td class="text-centre col-1">
-            <a href="/book-list/delete/<%= booklist[count].price %>"
+            <a href="/book-list/delete/<%= booklist[count]._id %>"
             class="btn btn-danger">
             <i class="fas fa-pencil-alt"></i> Delete </a>
             </td>
